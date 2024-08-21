@@ -6,13 +6,36 @@ function getRandomInt() {
   
 function getComputerChoice(){
     let result = getRandomInt();
+    let rock = "Rock";
+    let paper = "Paper";
+    let scissors = "Scissors";
     if(result == 0){
-        return "Rock"
+        return rock
     }
     else if(result == 1){
-        return "Paper"
+        return paper
     }
     else if(result == 2){
-        return "Scissors"
+        return scissors
+    }
+}
+
+function getHumanChoice(){
+    let humanChoice = prompt("Rock Paper or Scissors?");
+    let rock = "Rock";
+    let paper = "Paper";
+    let scissors = "Scissors";
+    let errorMessage = "You must enter a valid word";
+    if (humanChoice.toLowerCase() == "rock"){
+        return rock;
+    }
+    else if (humanChoice.toLowerCase() == "paper"){
+        return paper;
+    }
+    else if (humanChoice.toLowerCase() == "scissors"){
+        return scissors;
+    }
+    else{
+        return errorMessage;
     }
 }
