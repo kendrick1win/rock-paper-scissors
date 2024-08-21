@@ -88,8 +88,16 @@ function playRound(humanChoice, computerChoice){
     }
 }
 
+// Testing the playRound() function below
+//const humanSelection = getHumanChoice();
+//const computerSelection = getComputerChoice();
+//playRound(humanSelection, computerSelection);
 
-const humanSelection = getHumanChoice();
-const computerSelection = getComputerChoice();
-
-playRound(humanSelection, computerSelection);
+function playGame() {
+    for(let i=0; i <5; i++){
+        let humanChoice = getHumanChoice();
+        let computerChoice = getComputerChoice();
+        playRound(humanChoice,computerChoice);
+    }
+}
+playGame()
